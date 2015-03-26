@@ -1,6 +1,6 @@
 <?php
 
-interface EnderecoCorrespondenciaInterface
+interface EnderecoCobrancaInterface
 {
    public function getEnderecoCobranca();
 }

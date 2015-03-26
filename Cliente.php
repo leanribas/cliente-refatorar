@@ -1,6 +1,6 @@
 <?php
 
-abstract class Cliente implements ImportanciaClienteInterface, EnderecoCorrespondenciaInterface
+abstract class Cliente implements ImportanciaClienteInterface, EnderecoCobrancaInterface
 {
     protected $nome;
     protected $email;
