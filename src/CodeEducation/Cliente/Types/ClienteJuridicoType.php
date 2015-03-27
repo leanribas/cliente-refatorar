@@ -1,6 +1,10 @@
 <?php
 
-class ClienteJuridico extends Cliente
+namespace CodeEducation\Cliente\Types;
+
+use CodeEducation\Cliente\ClienteAbstract;
+
+class ClienteJuridicoType extends ClienteAbstract
 {
     protected $cnpj;
 
@@ -17,13 +21,17 @@ class ClienteJuridico extends Cliente
     
     public function setImportanciaCliente($estrelas)
     {
-        if($estrelas > 5 || $estrelas < 1)
+        if($estrelas > 5)
         {
-            throw new Exception('Quantidade de estrelas para pessoa jurídica não pode ser maior que 5');
-        }    
+            $this->estrelas = 5;
+        }   
+        elseif($estrelas < 1)
+        {
+            $this->estrelas = 1;
+        }
         else
         {
-            $this->estrelas = $estrelas;
+            $this->estrelas = $estrelas;    
         }
     }
     

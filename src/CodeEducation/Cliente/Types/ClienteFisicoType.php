@@ -1,6 +1,10 @@
 <?php
 
-class ClienteFisico extends Cliente
+namespace CodeEducation\Cliente\Types;
+
+use CodeEducation\Cliente\ClienteAbstract;
+
+class ClienteFisicoType extends ClienteAbstract
 {
     protected $cpf;   
     public function getCpf()
@@ -16,9 +20,13 @@ class ClienteFisico extends Cliente
     
     public function setImportanciaCliente($estrelas)
     {
-        if($estrelas > 3 || $estrelas < 1)
+        if($estrelas > 3)
         {
-            throw new Exception('Quantidade de estrelas para pessoa física não pode ser maior que 3');
+            $this->estrelas = 3;
+        }    
+        elseif($estrelas < 1)
+        {
+            $this->estrelas = 1;
         }    
         else
         {

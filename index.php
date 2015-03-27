@@ -1,11 +1,8 @@
 <?php
   require_once 'config.php';
   
-  require_once 'EnderecoCobrancaInterface.php';
-  require_once 'ImportanciaClienteInterface.php';  
-  require_once 'Cliente.php';  
-  require_once 'ClienteJuridico.php';
-  require_once 'ClienteFisico.php';
+  use CodeEducation\Cliente\Types\ClienteFisicoType as ClienteFisico;
+  use CodeEducation\Cliente\Types\ClienteJuridicoType as ClienteJuridico;
   
   $clientes = [];
   

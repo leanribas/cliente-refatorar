@@ -1,6 +1,11 @@
 <?php
 
-abstract class Cliente implements ImportanciaClienteInterface, EnderecoCobrancaInterface
+namespace CodeEducation\Cliente;
+
+use CodeEducation\Cliente\Interfaces\ImportanciaClienteInterface;
+use CodeEducation\Cliente\Interfaces\EnderecoCobrancaInterface;
+
+abstract class ClienteAbstract implements ImportanciaClienteInterface, EnderecoCobrancaInterface
 {
     protected $nome;
     protected $email;
